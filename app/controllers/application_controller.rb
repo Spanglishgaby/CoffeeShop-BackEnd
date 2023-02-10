@@ -38,7 +38,15 @@ class ApplicationController < Sinatra::Base
     customers = Customer.all
     customers.to_json
   end
-
+  post '/customers' do
+    customers = Customer.create(
+      name: params[:name],
+      email: params[:email],
+      phone: params[:phone],
+      address: params[:address],
+    )
+    customers.to_json
+  end
   #Drink-Ingredients
   get '/drinkIngredients' do
     drinkIngredients = DrinkIngredient.all
