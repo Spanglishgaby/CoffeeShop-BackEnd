@@ -48,20 +48,17 @@ class ApplicationController < Sinatra::Base
     customers.to_json
   end
   #Drink-Ingredients
-  get '/drinkIngredients' do
+
+  get '/drink-ingredients' do
     drinkIngredients = DrinkIngredient.all
     drinkIngredients.to_json
   end
-  post '/drinkIngredients' do
-    drinkIngredients = DrinkIngredient.create(
-      name: params[:name],
-    )
-    drinkIngredients.to_json
-  end
 
-  delete '/drinkIngredients/:id' do
-    drinkIngredients = DrinkIngredient.find(params[:id])
-    drinkIngredients.destroy
+  post '/drink-ingredients' do
+    drinkIngredients = DrinkIngredient.create(
+      drink_id: params[:drink_id],
+      ingredients_id: params[:ingredients_id],
+    )
     drinkIngredients.to_json
   end
 
@@ -70,7 +67,14 @@ class ApplicationController < Sinatra::Base
     ingredients = Ingredient.all
     ingredients.to_json
   end
-  
+
+  post '/ingredients' do
+    ingredients = Ingredient.create(
+      name: params[:name],
+    )
+    ingredients.to_json
+  end
+
   #Order
   get '/orders' do
     orders = Order.all
