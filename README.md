@@ -45,10 +45,11 @@ This will run your server on port
 * The **"drinks"** table represents the different types of drinks that are available for purchase, and contains information such as the name, price, size, and image URL.
 * The **"ingredients"** table represents the different ingredients that can be used to make the drinks.
 * The **"drink_ingredients"** table is a join table that connects drinks with their ingredients, allowing for the creation of custom drinks with specific ingredients.
+
 ![models](./Models.png)
 ### Fetch Example
 
-####Drinks
+#### Drinks
 You can make all CRUD calls for the drinks database.
 
 * CREATE drinks
