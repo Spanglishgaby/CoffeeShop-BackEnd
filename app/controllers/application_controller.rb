@@ -57,7 +57,7 @@ class ApplicationController < Sinatra::Base
   post '/drink-ingredients' do
     drinkIngredients = DrinkIngredient.create(
       drink_id: params[:drink_id],
-      ingredients_id: params[:ingredients_id],
+      ingredient_id: params[:ingredient_id],
     )
     drinkIngredients.to_json
   end
