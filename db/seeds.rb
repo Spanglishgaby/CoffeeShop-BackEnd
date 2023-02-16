@@ -1,7 +1,7 @@
 puts "🌱 Seeding spices..."
 # db/seeds.rb
 
-require 'faker'
+# require 'faker'
 
 # # Create Customers
 # 5.times do
@@ -73,8 +73,14 @@ require 'faker'
 # # end
 #  end
 
-
-
-
-
+DrinkIngredient.create(drink_id:1 ,ingredient_id:1)
+DrinkIngredient.create(drink_id:2 ,ingredient_id:1)
+DrinkIngredient.create(drink_id:3 ,ingredient_id:1)
+DrinkIngredient.create(drink_id:4 ,ingredient_id:1) 
+DrinkIngredient.create(drink_id:5 ,ingredient_id:7 )
+DrinkIngredient.create(drink_id:6 ,ingredient_id:11 )
+DrinkIngredient.create(drink_id:7 ,ingredient_id:8 )
+DrinkIngredient.create(drink_id:8 ,ingredient_id:6 )
+DrinkIngredient.create(drink_id:9 ,ingredient_id:9 )
+DrinkIngredient.create(drink_id:10 ,ingredient_id:10 )
 puts "✅ Done seeding!"
